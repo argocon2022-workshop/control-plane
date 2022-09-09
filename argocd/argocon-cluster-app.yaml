@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocon-cluster
+spec:
+  destination:
+    name: argocon
+    namespace: '*'
+  project: default
+  source:
+    path: clusters/argocon
+    repoURL: https://github.com/argocon2022-workshop/control-plane
+  syncPolicy:
+    automated: {}
