@@ -1,16 +1,16 @@
-# apiVersion: argoproj.io/v1alpha1
-# kind: AppProject
-# metadata:
-#   name: neeraj-a-22
-# spec:
-#   sourceRepos:
-#     - '*'
-#   destinations:
-#     - namespace: 'service-neeraj-a-22-*'
-#       server: http://cluster-argocon:8001
-#   roles:
-#   - name: admin
-#     policies:
-#     - p, proj:neeraj-a-22:admin, *, *, neeraj-a-22/*, allow
-#     groups:
-#     - neeraj.agrawal@earnest.com # please copy it from https://argocon.cd.akuity.cloud/user-info
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: <neeraj-a-22>
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-<neeraj-a-22>-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:<neeraj-a-22>:admin, *, *, <neeraj-a-22>/*, allow
+    groups:
+    - <neeraj.agrawal@earnest.com> please copy it from https://argocon.cd.akuity.cloud/user-info
