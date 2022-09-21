@@ -1,0 +1,14 @@
+# apiVersion: v1
+# kind: Namespace
+# metadata:
+#   name: service-USERNAME-dev
+# ---
+# apiVersion: v1
+# kind: Namespace
+# metadata:
+#   name: service-USERNAME-stage
+# ---
+# apiVersion: v1
+# kind: Namespace
+# metadata:
+#   name: service-USERNAME-prod
