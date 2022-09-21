@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-lcenta-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-lcenta-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-lcenta-prod
