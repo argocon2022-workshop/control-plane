@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: starslider
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-starslider-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:starslider:admin, *, *, starslider/*, allow
+    groups:
+    - dominik.hartmann@me.com # please copy it from https://argocon.cd.akuity.cloud/user-info
