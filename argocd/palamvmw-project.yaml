@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: palamvmw
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-palamvmw-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:palamvmw:admin, *, *, palamvmw/*, allow
+    groups:
+    - https://argocon.cd.akuity.cloud/user-info
