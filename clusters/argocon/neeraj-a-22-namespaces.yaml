@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-neeraj-a-22-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-neeraj-a-22-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-neeraj-a-22-prod
