@@ -13,4 +13,4 @@
      policies:
      - p, proj:callmeford:admin, *, *, callmeford/*, allow
      groups:
-     - <EMAIL> wagsprog@gmail.com
+     - wagsprog@gmail.com
