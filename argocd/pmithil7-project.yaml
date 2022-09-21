@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: <USERNAME>
+  name: pmithil7
 spec:
   sourceRepos:
     - '*'
@@ -11,6 +11,6 @@ spec:
   roles:
   - name: admin
     policies:
-    - p, proj:<USERNAME>:admin, *, *, <USERNAME>/*, allow
+    - p, proj:pmithil7:admin, *, *, pmithil7/*, allow
     groups:
     - mitpatel@equinix.com
