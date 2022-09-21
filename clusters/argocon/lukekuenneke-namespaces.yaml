@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-lukekuenneke-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-lukekuenneke-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-lukekuenneke-prod
