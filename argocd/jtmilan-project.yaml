@@ -13,4 +13,4 @@ spec:
     policies:
     - p, proj:jtmilan:admin, *, *, jtmilan/*, allow
     groups:
-    - <EMAIL> # please copy it from https://argocon.cd.akuity.cloud/user-info
+    - jtmilan@gmail.com # please copy it from https://argocon.cd.akuity.cloud/user-info
