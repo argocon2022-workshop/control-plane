@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-ofominykh-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-ofominykh-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-ofominykh-prod
