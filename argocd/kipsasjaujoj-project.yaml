@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: kipsasjaujoj
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-kipsasjaujoj-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:kipsasjaujoj:admin, *, *, kipsasjaujoj/*, allow
+    groups:
+    - vaidotas.slavinskas@vinted.com # please copy it from https://argocon.cd.akuity.cloud/user-info
