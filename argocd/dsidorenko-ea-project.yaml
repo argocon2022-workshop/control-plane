@@ -1,16 +1,16 @@
-# apiVersion: argoproj.io/v1alpha1
-# kind: AppProject
-# metadata:
-#   name: dsidorenko-ea
-# spec:
-#   sourceRepos:
-#     - '*'
-#   destinations:
-#     - namespace: 'service-dsidorenko-ea-*'
-#       server: http://cluster-argocon:8001
-#   roles:
-#   - name: admin
-#     policies:
-#     - p, proj:dsidorenko-ea:admin, *, *, dsidorenko@ea.com/*, allow
-#     groups:
-#     - <EMAIL> # please copy it from https://argocon.cd.akuity.cloud/user-info
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: dsidorenko-ea
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-dsidorenko-ea-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:dsidorenko-ea:admin, *, *, dsidorenko@ea.com/*, allow
+    groups:
+    - dsidorenko@ea.com # please copy it from https://argocon.cd.akuity.cloud/user-info
