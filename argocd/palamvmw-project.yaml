@@ -13,4 +13,4 @@ spec:
     policies:
     - p, proj:palamvmw:admin, *, *, palamvmw/*, allow
     groups:
-    - https://argocon.cd.akuity.cloud/user-info
+    - palam@vmware.com
