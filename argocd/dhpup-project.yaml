@@ -1,16 +1,16 @@
 # apiVersion: argoproj.io/v1alpha1
 # kind: AppProject
 # metadata:
-#   name: <USERNAME>
+#   name: dhpup
 # spec:
 #   sourceRepos:
 #     - '*'
 #   destinations:
-#     - namespace: 'service-<USERNAME>-*'
+#     - namespace: 'service-dhpup-*'
 #       server: http://cluster-argocon:8001
 #   roles:
 #   - name: admin
 #     policies:
-#     - p, proj:<USERNAME>:admin, *, *, <USERNAME>/*, allow
+#     - p, proj:dhpup:admin, *, *, dhpup/*, allow
 #     groups:
-#     - <EMAIL> # please copy it from https://argocon.cd.akuity.cloud/user-info
+#     - danielvanhoang@gmail.com # please copy it from https://argocon.cd.akuity.cloud/user-info
