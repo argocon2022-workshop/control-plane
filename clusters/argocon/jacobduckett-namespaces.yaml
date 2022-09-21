@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-jacobduckett-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-jacobduckett-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-jacobduckett-prod

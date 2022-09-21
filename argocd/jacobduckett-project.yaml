@@ -1,16 +1,16 @@
-# apiVersion: argoproj.io/v1alpha1
-# kind: AppProject
-# metadata:
-#   name: jacobduckett
-# spec:
-#   sourceRepos:
-#     - '*'
-#   destinations:
-#     - namespace: 'service-jacobduckett-*'
-#       server: http://cluster-argocon:8001
-#   roles:
-#   - name: admin
-#     policies:
-#     - p, proj:jacobduckett:admin, *, *, jacobduckett/*, allow
-#     groups:
-#     - jacob.l.duckett@gmail.com # please copy it from https://argocon.cd.akuity.cloud/user-info
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: jacobduckett
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-jacobduckett-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:jacobduckett:admin, *, *, jacobduckett/*, allow
+    groups:
+    - jacob.l.duckett@gmail.com # please copy it from https://argocon.cd.akuity.cloud/user-info
