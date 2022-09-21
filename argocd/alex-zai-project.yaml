@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: alex-zai
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-alex-zai-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:alex-zai:admin, *, *, alex-zai/*, allow
+    groups:
+    - aleksandr.zaicev@vinted.com # please copy it from https://argocon.cd.akuity.cloud/user-info
