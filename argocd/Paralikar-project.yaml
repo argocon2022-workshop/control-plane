@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: paralika
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-paralika-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:paralika:admin, *, *, paralika/*, allow
+    groups:
+    - vaibhavpbits@gmail.com # please copy it from https://argocon.cd.akuity.cloud/user-info
