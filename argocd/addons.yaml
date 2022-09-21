@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: addons
+spec:
+  generators:
+    - matrix:
+        generators:
+          - git:
+              repoURL: https://github.com/argocon2022-workshop/control-plane
+              revision: HEAD
+              directories:
+                - path: clusters/addons/*
+          - clusters:
+              selector:
+                matchExpressions:
+                - {key: 'akuity.io/argo-cd-cluster-name', operator: NotIn, values: [in-cluster]}
+  template:
+    metadata:
+      name: '{{path.basename}}-{{name}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/argocon2022-workshop/control-plane
+        targetRevision: HEAD
+        path: '{{path}}'
+      destination:
+        server: '{{server}}'
+        namespace: '{{path.basename}}'
