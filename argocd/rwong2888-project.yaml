@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: rwong2888
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-rwong2888-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:rwong2888:admin, *, *, rwong2888/*, allow
+    groups:
+    - rwong@forbes.com # please copy it from https://argocon.cd.akuity.cloud/user-info
