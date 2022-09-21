@@ -2,16 +2,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: edgaras@apsega.lt
+  name: apsega
 spec:
   sourceRepos:
     - '*'
   destinations:
-    - namespace: 'service-edgaras@apsega.lt-*'
+    - namespace: 'service-apsega-*'
       server: http://cluster-argocon:8001
   roles:
     - name: admin
       policies:
-        - p, proj:edgaras@apsega.lt:admin, *, *, edgaras@apsega.lt/*, allow
+        - p, proj:apsega:admin, *, *, apsega/*, allow
       groups:
         - edgaras@apsega.lt # please copy it from https://argocon.cd.akuity.cloud/user-info
