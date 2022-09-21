@@ -1,0 +1,17 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: apsega
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-apsega-*'
+      server: http://cluster-argocon:8001
+  roles:
+    - name: admin
+      policies:
+        - p, proj:apsega:admin, *, *, apsega/*, allow
+      groups:
+        - edgaras@apsega.lt # please copy it from https://argocon.cd.akuity.cloud/user-info

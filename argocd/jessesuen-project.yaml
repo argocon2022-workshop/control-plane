@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: jessesuen
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-jessesuen-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:jessesuen:admin, *, *, jessesuen/*, allow
+    groups:
+    - jessesuen@gmail.com

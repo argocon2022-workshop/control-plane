@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: lukekuenneke
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-lukekuenneke-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:lukekuenneke:admin, *, *, lukekuenneke/*, allow
+    groups:
+    - luke.kuenneke@gmail.com

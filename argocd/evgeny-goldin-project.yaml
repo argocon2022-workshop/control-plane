@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: evgeny-goldin
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-evgeny-goldin-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:evgeny-goldin:admin, *, *, evgeny-goldin/*, allow
+    groups:
+    - evgenyg@gmail.com

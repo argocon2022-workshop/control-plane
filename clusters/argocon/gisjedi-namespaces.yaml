@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-gisjedi-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-gisjedi-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-gisjedi-prod

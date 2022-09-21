@@ -1,0 +1,17 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: nikita-akuity
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-nikita-akuity-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:nikita-akuity:admin, *, *, nikita-akuity/*, allow
+    groups:
+    - nikita@akuity.io

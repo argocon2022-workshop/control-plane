@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: terrytangyuan
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-terrytangyuan-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:terrytangyuan:admin, *, *, terrytangyuan/*, allow
+    groups:
+    - terrytangyuan@gmail.com

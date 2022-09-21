@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-wmgroot-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-wmgroot-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-wmgroot-prod
