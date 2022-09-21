@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-jessesuen-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-jessesuen-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-jessesuen-prod
