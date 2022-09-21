@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-rwong2888-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-rwong2888-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-rwong2888-prod
