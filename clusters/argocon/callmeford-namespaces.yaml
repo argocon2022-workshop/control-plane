@@ -1,14 +1,14 @@
- apiVersion: v1
- kind: Namespace
- metadata:
-   name: service-callmeford-dev
- ---
- apiVersion: v1
- kind: Namespace
- metadata:
-   name: service-callmeford-stage
- ---
- apiVersion: v1
- kind: Namespace
- metadata:
-   name: service-callmeford-prod
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-callmeford-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-callmeford-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-callmeford-prod
