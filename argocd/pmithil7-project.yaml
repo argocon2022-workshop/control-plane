@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: <USERNAME>
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-pmithil7-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:<USERNAME>:admin, *, *, <USERNAME>/*, allow
+    groups:
+    - mitpatel@equinix.com
