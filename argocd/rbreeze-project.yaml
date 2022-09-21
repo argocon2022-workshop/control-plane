@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: rbreeze
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-rbreeze-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:rbreeze:admin, *, *, rbreeze/*, allow
+    groups:
+    - remignton@breeze.software
