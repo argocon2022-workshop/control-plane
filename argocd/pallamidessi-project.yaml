@@ -1,0 +1,16 @@
+# apiVersion: argoproj.io/v1alpha1
+# kind: AppProject
+# metadata:
+#   name: pallamidessi
+# spec:
+#   sourceRepos:
+#     - '*'
+#   destinations:
+#     - namespace: 'service-pallamidessi-*'
+#       server: http://cluster-argocon:8001
+#   roles:
+#   - name: admin
+#     policies:
+#     - p, proj:pallamidessi:admin, *, *, pallamidessi/*, allow
+#     groups:
+#     - joseph.pallamidessi@gmail.com
