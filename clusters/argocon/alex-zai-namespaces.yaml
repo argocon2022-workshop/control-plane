@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-alex-zai-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-alex-zai-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-alex-zai-prod
