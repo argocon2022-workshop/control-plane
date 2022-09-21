@@ -5,7 +5,7 @@ metadata:
 spec:
   sourceRepos:
     - '*'
-   destinations:
+  destinations:
     - namespace: 'service-gisjedi-*'
       server: http://cluster-argocon:8001
   roles:
