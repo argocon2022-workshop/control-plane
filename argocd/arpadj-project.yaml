@@ -1,0 +1,17 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: arpadj
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-arpadj-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:arpadj:admin, *, *, arpadj/*, allow
+    groups:
+    - arpadj@gmail.com # please copy it from https://argocon.cd.akuity.cloud/user-info
