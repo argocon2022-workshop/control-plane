@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-pallamidessi-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-pallamidessi-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-pallamidessi-prod
