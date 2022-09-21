@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: wmgroot
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-wmgroot-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:wmgroot:admin, *, *, wmgroot/*, allow
+    groups:
+    - wmgroot@gmail.com
