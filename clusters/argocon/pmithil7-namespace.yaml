@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-pmithil7-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-pmithil7-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-pmithil7-prod
