@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-starslider-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-starslider-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-starslider-prod
