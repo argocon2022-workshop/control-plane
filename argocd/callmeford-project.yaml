@@ -1,0 +1,16 @@
+ apiVersion: argoproj.io/v1alpha1
+ kind: AppProject
+ metadata:
+   name: callmeford
+ spec:
+   sourceRepos:
+     - '*'
+   destinations:
+     - namespace: 'service-callmeford-*'
+       server: http://cluster-argocon:8001
+   roles:
+   - name: admin
+     policies:
+     - p, proj:callmeford:admin, *, *, callmeford/*, allow
+     groups:
+     - wagsprog@gmail.com
