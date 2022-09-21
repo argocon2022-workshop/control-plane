@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-dakotalillie-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-dakotalillie-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-dakotalillie-prod

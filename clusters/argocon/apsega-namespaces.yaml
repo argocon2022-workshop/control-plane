@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-apsega-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-apsega-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-apsega-prod
