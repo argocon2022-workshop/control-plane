@@ -11,6 +11,6 @@ spec:
   roles:
   - name: admin
     policies:
-    - p, proj:dsidorenko-ea:admin, *, *, dsidorenko@ea.com/*, allow
+    - p, proj:dsidorenko-ea:admin, *, *, dsidorenko-ea/*, allow
     groups:
     - dsidorenko@ea.com # please copy it from https://argocon.cd.akuity.cloud/user-info
