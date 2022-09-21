@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-evgeny-goldin-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-evgeny-goldin-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-evgeny-goldin-prod
