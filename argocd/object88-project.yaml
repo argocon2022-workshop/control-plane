@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: object88
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-object88-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:object88:admin, *, *, object88/*, allow
+    groups:
+    - object88@gmail.com

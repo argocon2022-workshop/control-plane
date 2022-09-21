@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: abaehremc
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-abaehremc-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:abaehremc:admin, *, *, abaehremc/*, allow
+    groups:
+    - abaehre@morningconsult.com

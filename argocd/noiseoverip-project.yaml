@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: noiseoverip
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-noiseoverip-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:noiseoverip:admin, *, *, noiseoverip/*, allow
+    groups:
+    - alisauskas.saulius@gmail.com
