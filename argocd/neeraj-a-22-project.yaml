@@ -13,4 +13,4 @@ spec:
     policies:
     - p, proj:neeraj-a-22:admin, *, *, neeraj-a-22/*, allow
     groups:
-    - neeraj.agrawal@earnest.com please copy it from https://argocon.cd.akuity.cloud/user-info
+    - neeraj.agrawal@earnest.com
