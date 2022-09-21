@@ -13,4 +13,4 @@ spec:
     policies:
     - p, proj:rbreeze:admin, *, *, rbreeze/*, allow
     groups:
-    - remignton@breeze.software
+    - remington@breeze.software
