@@ -11,6 +11,6 @@ spec:
   roles:
   - name: admin
     policies:
-    - p, proj:<USERNAME>:admin, *, *, <USERNAME>/*, allow
+    - p, proj:evgeny-goldin:admin, *, *, evgeny-goldin/*, allow
     groups:
     - evgenyg@gmail.com
