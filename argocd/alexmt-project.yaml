@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: alexmt
+spec:
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'service-alexmt-*'
+      server: http://cluster-argocon:8001
+  roles:
+  - name: admin
+    policies:
+    - p, proj:alexmt:admin, *, *, alexmt/*, allow
+    groups:
+    - https://argocon.cd.akuity.cloud/user-info
