@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-paralika-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-paralika-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-paralika-prod
