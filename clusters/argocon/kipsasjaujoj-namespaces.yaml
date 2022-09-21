@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-kipsasjaujoj-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-kipsasjaujoj-stage
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: service-kipsasjaujoj-prod
